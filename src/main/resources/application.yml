@@ -1,0 +1,11 @@
+server:
+  context-path: /ems #指定应用名
+spring:
+  profiles:
+    active: prod #激活生产配置
+name:  xiaohei
+age: 23
+price: 23.23
+qqs: xiaohei,xiaoming,xiaobai
+strs: abc,xiaosan,bcd
+maps: "{driver: 'com.mysql.jdbc',url: 'jdbc:mysql://localhost:3306/test'}"
