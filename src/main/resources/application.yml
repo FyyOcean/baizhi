@@ -3,9 +3,20 @@ server:
 spring:
   profiles:
     active: prod #激活生产配置
-name:  xiaohei
+id: 21
+name: 小白
+names: xiaoheis
 age: 23
+bir: 2012/12/12
 price: 23.23
 qqs: xiaohei,xiaoming,xiaobai
 strs: abc,xiaosan,bcd
 maps: "{driver: 'com.mysql.jdbc',url: 'jdbc:mysql://localhost:3306/test'}"
+user:
+  id: 20
+  namea: xiao嘿嘿
+  age: 23
+  bir: 2012/11/11
+  maps:
+    aa: xiaohei
+    bb: xiaoming

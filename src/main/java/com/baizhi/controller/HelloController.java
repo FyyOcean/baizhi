@@ -1,5 +1,6 @@
 package com.baizhi.controller;
 
+import com.baizhi.entity.User;
 import com.baizhi.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,7 +19,7 @@ import java.util.Map;
 //springboot项目默认没有访问名
 @RequestMapping("hello")
 public class HelloController {
-    @Value("${name}")
+    @Value("${names}")
     private String name;
     @Value("${server.port}")
     private String port;
@@ -32,6 +33,8 @@ public class HelloController {
     private List<String> strs;
     @Value("#{${maps}}")
     private Map<String,String> maps;
+    @Autowired
+    private User user;
     @Autowired
     @Qualifier("helloServiceImpl2")
     private  HelloService helloService;
@@ -56,6 +59,9 @@ public class HelloController {
         strs.forEach(str -> System.out.println(str));
         System.out.println("遍历map");
         maps.forEach((k,v) -> System.out.println("key:"+k+"value:"+v));
+        System.out.println("user: "+user);
+        System.out.println("user中map ");
+        user.getMaps().forEach((k,v)-> System.out.println("userkey:"+k+"uservalue:"+v));
         helloService.hello("springboot_haha");
         System.out.println("Calendar: "+calender.getTime());
         System.out.println("Connection :"+connection);
