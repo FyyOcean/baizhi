@@ -3,6 +3,11 @@ server:
 spring:
   profiles:
     active: prod #激活生产配置
+  mvc:
+    view:
+      prefix: / #配置前缀
+      suffix: .jsp #配置后缀
+
 id: 21
 name: 小白
 names: xiaoheis
